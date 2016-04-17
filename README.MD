@@ -30,7 +30,7 @@ Prints the value of R6 as a string representation of the day. (0 = Saturday, 1 =
 ## Zeller Function
 [Zeller Function](https://en.wikipedia.org/wiki/Zeller%27s_congruence) is a function to determine the day of the week from a date.
 
-![](https://upload.wikimedia.org/math/a/f/c/afc4370e24fdc8720f2569d8a1b7d0d0.png) [^1]
+![](https://upload.wikimedia.org/math/a/f/c/afc4370e24fdc8720f2569d8a1b7d0d0.png) 
 
 Where
 - h is the day of the week (0 = Saturday, 1 = Sunday, 2 = Monday, ..., 6 = Friday)
@@ -41,6 +41,6 @@ Where
 
 The formulas rely on the mathematician's definition of modulo division, which means that −2 mod 7 is equal to positive 5. Unfortunately, the way most computer languages implement the remainder function, −2 mod 7 returns a result of −2. We use a modified version of the equation to stop this from happening.
 
-![](https://upload.wikimedia.org/math/5/1/2/5127c3c9c05a60a9aa66c8d34a8970a4.png) [^1]
+![](https://upload.wikimedia.org/math/5/1/2/5127c3c9c05a60a9aa66c8d34a8970a4.png) 
 
-[^1]: Images from wikipedia 
+
