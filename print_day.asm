@@ -1,0 +1,70 @@
+; Nathan Button
+; CS_2810
+; Sub program for day_of_week
+;
+; Uses the Value of R6 to print out a string rep of the day
+; (0 = Saturday, 1 = Sunday, . . . 6 = Friday)
+
+.ORIG x4500
+	ADD R2, R6, #-1
+	BRz DAY_SUNDAY
+
+	ADD R2, R6, #-2
+	BRz DAY_MONDAY
+
+	ADD R2, R6, #-3
+	BRz DAY_TUESDAY
+
+	ADD R2, R6, #-4
+	BRz DAY_WEDNESDAY
+
+	ADD R2, R6, #-5
+	BRz DAY_THURSDAY
+
+	ADD R2, R6, #-6
+	BRz DAY_FRIDAY
+
+	BR DAY_SATURDAY
+
+	DAY_SUNDAY
+		LEA	R0,SUNDAY
+		PUTS
+    BR RETURN
+	DAY_MONDAY
+		LEA	R0,MONDAY
+		PUTS
+    BR RETURN
+	DAY_TUESDAY
+		LEA	R0,TUESDAY
+		PUTS
+    BR RETURN
+	DAY_WEDNESDAY
+		LEA	R0,WEDNESDAY
+		PUTS
+      BR RETURN
+	DAY_THURSDAY
+		LEA	R0,THURSDAY
+		PUTS
+      BR RETURN
+	DAY_FRIDAY
+		LEA	R0,FRIDAY
+		PUTS
+      BR RETURN
+	DAY_SATURDAY
+		LEA	R0,SATURDAY
+		PUTS
+      BR RETURN
+
+RETURN
+    LD R3, RETURN_AD
+    JSRR R3
+
+RETURN_AD .FILL x3036
+SUNDAY .STRINGZ "Sunday\n"
+MONDAY .STRINGZ "Monday\n"
+TUESDAY .STRINGZ "Tuesday\n"
+WEDNESDAY .STRINGZ "Wednesday\n"
+THURSDAY .STRINGZ "Thursday\n"
+FRIDAY .STRINGZ "Friday\n"
+SATURDAY .STRINGZ "Saturday\n"
+.END
